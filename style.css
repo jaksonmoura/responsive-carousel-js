@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  margin-top: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 72px;
+}
+
+.carousel-cards {
+  overflow-x: hidden;
+  padding-bottom: 0.5rem;
+}
+.carousel-cards .card-list {
+  display: inline-flex;
+  width: 100%;
+  gap: 2rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  padding: 0;
+}
+@media (min-width: 40em) {
+  .carousel-cards .card-list {
+    overflow-x: hidden;
+  }
+}
+.carousel-cards .carousel-wrapper {
+  position: relative;
+  padding: 0 2.5rem;
+}
+.carousel-cards-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: calc(50% - 1rem);
+}
+.carousel-cards-controls-button {
+  all: unset;
+  cursor: pointer;
+  color: #fff;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #13335f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-cards-controls-button img {
+  filter: invert(1);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.carousel-cards-controls-button:hover {
+  background-color: #0f2c4a;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 118px auto;
+  width: 308px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+.card-title {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #27add9;
+}
+.card-content {
+  padding: 2rem 1rem;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card .card-btn {
+  border-radius: 8px;
+  border: solid 1px #27add9;
+  text-align: center;
+  color: #27add9;
+  padding: 16px 25px;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  all: unset;
+  margin-right: 5px;
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  background: gray;
+  margin-top: 10px;
+}
+.dot.active {
+  outline: 2px solid #13335f;
+  outline-offset: 2px;
+}
+
+.dot:focus {
+  outline: 1px solid blue;
+}/*# sourceMappingURL=style.css.map */
